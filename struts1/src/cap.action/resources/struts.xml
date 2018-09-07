@@ -1,0 +1,3 @@
+<action name="'sayHi" class="'cap.action.HelloWorldAction">
+    <result name="'sucess">/result.jsp</result>
+</action>
