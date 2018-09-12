@@ -1,0 +1,16 @@
+
+<struts>
+<constant name="struts.i18n.encoding" value="utf-8"></constant>
+
+<package name="default" namespace="/" extends="login">
+ <action name="timer" class="cap.action.TimerAction" method="timer">
+
+
+     <result name="success">/result.jsp</result>
+ </action>
+ <action name="login" class="cap.action.LoginAction" method="login">
+         <result name="success"></result>
+     <result name="error">/error.jsp</result>
+    </action>
+</package>
+</struts>

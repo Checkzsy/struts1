@@ -1,0 +1,22 @@
+
+<struts>
+<constant name="struts.i18n.encoding" value="utf-8"></constant>
+
+<package name="login"  extends="struts-default">
+ <interceptors>
+     <interceptor name="checkLogin" class="cap.util.CheckLoginInterceptor"></interceptor>
+     <interceptor-stack name="mystack">
+     <interceptor-ref name="defaultStack"><</interceptor-ref>
+     <interceptor-ref name="checkLogin"></interceptor-ref>
+     </interceptor-stack>
+ </interceptors>
+<<default-interceptor-ref name="mystack"></default-interceptor-ref>
+
+    <global-results>
+        <result name="login">/login.jsp</result>
+    </global-results>
+
+
+</package>
+    <include file="text.xml"></include>
+</struts>
